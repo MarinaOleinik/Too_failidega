@@ -18,11 +18,11 @@ def uus_sona(file:str,x:str)->list:
         f.write(x+"\n")
     mas=loe_failist(file)
     return mas
-def correction(sona,mas):
+def correction(sona:str,mas:list):
     for i in range(len(mas)):
         if mas[i]==sona:
-            uus_sona=sona.raplace(sona,input("UUs sõna"))
-            mas.insert(i,sona)
+            uus_sona=sona.replace(sona,input("UUs sõna"))
+            mas.insert(i,uus_sona)
             mas.remove(sona)
     return mas
 def failisse(mas:list,file:str):
