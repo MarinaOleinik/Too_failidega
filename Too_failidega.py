@@ -29,7 +29,7 @@ while True:
             lang='ru'
         else:
             mas=est_list
-            lang='fi'
+            lang='et'
         for sona in mas:
             sonad=sonad+" "+sona
         heli(sonad,lang)
