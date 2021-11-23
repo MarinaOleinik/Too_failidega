@@ -1,15 +1,9 @@
 from Module import *
 rus_list=loe_failist("rus.txt")
 est_list=loe_failist("est.txt")
-print(rus_list)
-print(est_list)
-sonad=""
-for sona in rus_list:
-    sonad=sonad+sona
-heli(sonad,'ru')
 
 while True:
-    menu=input("Tõlgida-T,\nUus sõna-U\n,Viga-V,\nKontroll-K;\nLõpp-L")
+    menu=input("Rääkida -R,\nKõik sõnad -S,\nTõlgida-T,\nUus sõna-U,\nViga-V,\nKontroll-K;\nLõpp-L")
     if menu.upper()=="T":
         pass
     elif menu.upper()=="U":
@@ -24,8 +18,21 @@ while True:
         else:
             est_list=correction(input("Sõna "),est_list)
             failisse(est_list,"est.txt")
-    elif menu.upper()=="K":
-        pass
+    elif menu.upper()=="S":
+        print(rus_list)
+        print(est_list)
+    elif menu.upper()=="R":
+        keel=input("Mis keeles rääkida?")
+        sonad=""
+        if keel=="rus":
+            mas=rus_list
+            lang='ru'
+        else:
+            mas=est_list
+            lang='fi'
+        for sona in mas:
+            sonad=sonad+" "+sona
+        heli(sonad,lang)
     else:
         break
 
