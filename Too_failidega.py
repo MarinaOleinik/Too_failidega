@@ -15,9 +15,12 @@ while True:
     elif menu.upper()=="U":
         rus_list=uus_sona("rus.txt",input("Новое слово:"))
         est_list=uus_sona("est.txt",input("Uus sõna:"))
-        pass
+        
     elif menu.upper()=="V":
-        pass
+        rus_list=correction(input("Слово "),rus_list)
+        est_list=correction(input("Sõna "),est_list)
+        failisse(rus_list,"rus.txt")
+        failisse(est_list,"est.txt")
     elif menu.upper()=="K":
         pass
     else:
